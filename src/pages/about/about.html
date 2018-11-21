@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="seleccion">
+    <ion-segment-button value="Productos">Electrodomésticos</ion-segment-button>
+    <!----ion-segment-button value="Ofertas">Ofertas</ion-segment-button-->
+    <ion-segment-button value="Celulares">Celulares</ion-segment-button>
+  </ion-segment>
+<br>
+  <div *ngIf="seleccion == 'Productos'">
+      
+      <ion-list>
+          <ion-item-divider>Lista de Productos</ion-item-divider>
+          <ion-item-group>
+            <ion-item *ngFor="let item of lista1" text-left detail-push >
+              <ion-thumbnail item-left><img [src]="'assets/thumbnails/thumb_'+item.id+'.png'"></ion-thumbnail>
+              <h3 style="color: #f53d3d">{{item.titulo1}}</h3>
+              <p>{{item.descripcion1}}</p>
+              <ion-note item-right>Mas</ion-note>
+      
+            </ion-item>
+          </ion-item-group>
+        </ion-list>
+
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          
+          <button ion-button (click)="agregarPagina()" color="dark" block >Comprar</button>
+
+        </ion-col>
+        
+        <!--<ion-col>
+          <button ion-button block>Clientes</button>
+        </ion-col>-->
+      </ion-row>
+    </ion-grid>
+    <!--<button ion-button color="primary" (click)="showAlert()">Ver màs...</button>
+    <button ion-button color="danger">Salir</button>-->
+
+
+  </div>
+  <!--<div *ngIf="seleccion == 'Ofertas'">
+    <button ion-button outline>Promociones</button>
+    <button ion-button color="danger">Salir</button>
+  </div>-->
+  <div *ngIf="seleccion == 'Celulares'">
+      <ion-list>
+          <ion-item-divider>Celulares</ion-item-divider>
+          <ion-item-group>
+            <ion-item *ngFor="let item of lista" text-left detail-push >
+              <ion-thumbnail item-left><img [src]="'assets/imgs/a_'+item.id+'.jpg'"></ion-thumbnail>
+              <h3 style="color: #f53d3d">{{item.titulo}}</h3>
+              <p>{{item.descripcion}}</p>
+              
+      
+            </ion-item>
+          </ion-item-group>
+        </ion-list>
+        <ion-grid>
+            <ion-row>
+              
+              <ion-col>
+                <button ion-button color="danger" (click)="agregarPagina1()" block>Comprar</button>
+              </ion-col>
+              <!--<ion-col>
+                <button ion-button block>Clientes</button>
+              </ion-col>-->
+            </ion-row>
+          </ion-grid>
+
+  </div>
+</ion-content>

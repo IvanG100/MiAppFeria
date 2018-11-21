@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons start>
+      <button ion-button icon-only><ion-icon name="add-circle" style="color: black"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only><ion-icon name="analytics" style="color: chartreuse"></ion-icon></button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  
+  <ion-list>
+    <ion-list-header style="background-color: black; color:white">App Store</ion-list-header>
+
+    <ion-card >
+      <!--<ion-card-header >
+        <h1 style="color:white">CTA</h1>
+      </ion-card-header-->
+      <ion-card-content>
+        <img [src]="'assets/imgs/electro2.jpg'">
+      </ion-card-content>
+    </ion-card>
+
+    <p style="color:black">Bienvenido a la app sobre Electrodomesticos y celulares realizado a modo de demostración para la expo feria del Centro
+      Tecnológico de Avanzada (CTA).</p>
+
+
+
+
+    <ion-item-group >
+      <ion-item-divider>Aqui puedes encontrar:</ion-item-divider>
+      <ion-item *ngFor="let item of lista" text-left style="background:rgb(235, 238, 241)"><!--detail-push-->
+        <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'"></ion-avatar>
+        <ion-label style="color:black">{{item.titulo}}</ion-label>
+        <p>{{item.descripcion}}</p>
+        <!--<ion-toggle color="primary"></ion-toggle>-->
+
+        <!--<ion-note item-right>Mas</ion-note>-->
+
+      </ion-item>
+    </ion-item-group>
+    <!--<ion-item-divider>Lista</ion-item-divider>
+    <button ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      Shopping
+    </button>-->
+  </ion-list>
+</ion-content>

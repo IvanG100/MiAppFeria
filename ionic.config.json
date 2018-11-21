@@ -1,0 +1,7 @@
+{
+  "name": "ep_ivan_gonzalez",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

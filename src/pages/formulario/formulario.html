@@ -1,0 +1,62 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons start>
+      <button ion-button icon-only><ion-icon name="add-circle" style="color: #488aff"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Formulario</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only><ion-icon name="logo-android" style="color: chartreuse"></ion-icon></button>
+      <button ion-button icon-only><ion-icon name="logo-chrome" style="color: skyblue"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="presentActionSheet()" color="dark" block >Action</button>
+  <br>
+  <ion-card >
+    <img [src]="'assets/imgs/paisaje.jpg'">
+    <ion-card-content>
+      <ion-card-title>
+        Montaña
+      </ion-card-title>
+      <p>Bienvenido al card con imagenes</p>
+      <ion-list>
+        <ion-icon ios="ios-sunny" md="md-sunny" style="color: yellow;background-size: 120px"></ion-icon>
+      </ion-list>
+    </ion-card-content>
+    
+    
+  </ion-card>
+  <br>
+
+  <ion-card>
+    <ion-card-header>
+      <h1>TITULO</h1>
+    </ion-card-header>
+    <ion-card-content>
+      HOLA
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <h1>TITULO</h1>
+    </ion-card-header>
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+
+      <button ion-item>
+        <ion-icon name="musical" item-start></ion-icon>
+        Hospital
+      </button>
+
+    </ion-list>
+  </ion-card>
+  <br>
+  
+</ion-content>
